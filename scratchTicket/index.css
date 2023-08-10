@@ -1,0 +1,97 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #f8f8f8;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60vw;
+    margin: 20px auto;
+    position: relative;
+    border-radius: 5px;
+    background: repeating-linear-gradient(135deg, transparent, transparent 3px, rgb(228, 161, 85) 3px, rgb(240, 118, 118) 8px);
+    animation: shine 1s infinite linear;
+    overflow: hidden;
+}
+
+@keyframes shine {
+    0% {
+        background-position: -1px -1px;
+    }
+    100% {
+        background-position: -12px -12px;
+    }
+}
+
+.container .mask {
+    position: absolute;
+    z-index: 1000;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    margin: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .mask .button {
+    padding: 8px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #eee;
+    letter-spacing: 5px;
+    background-color: rgb(230, 109, 109);
+    border-color: rgb(230, 109, 109);
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 0.3px #999;
+    cursor: pointer;
+}
+
+.container .box {
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    margin: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .result {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 100px;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    color: #111;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.container .canvas {
+    position: absolute;
+    z-index: 10;
+}
