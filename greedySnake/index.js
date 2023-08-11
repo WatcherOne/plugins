@@ -1,4 +1,7 @@
 window.onload = () => {
+    // 地图随机性 - 生成不同大小的地图？
+    // 多人在线对战？(抢食物？不能碰撞到？)
+    // 不同的食物作用不同？
     // 记录用户分数
 
     $start.addEventListener('click', startGame)
